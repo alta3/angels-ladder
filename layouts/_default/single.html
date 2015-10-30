@@ -1,5 +1,14 @@
 {{ partial "header.html" . }}
 
+  <nav class="pagination">
+    {{ if .Prev }}
+      <span class="previous">&larr; <a href="{{ .Prev.Permalink }}" rel="prev">{{ .Prev.Title }}</a></span>
+    {{ end }}
+    {{ if .Next }}
+      <span class="next"><a href="{{ .Next.Permalink }}" rel="next">{{ .Next.Title }}</a> &rarr;</span>
+    {{ end }}
+  </nav>
+
   <!-- Main Section Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <main id="single" role="main">
@@ -17,24 +26,16 @@
       
       <!-- ShareThis Buttons
       –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-      <div id="share-this" class="col span_10">
-        <span class='st_twitter_large' displayText='Tweet'></span>
-        <span class='st_facebook_large' displayText='Facebook'></span>
-        <span class='st_googleplus_large' displayText='Google +'></span>
-        <span class='st_pocket_large' displayText='Pocket'></span>
-        <span class='st_sharethis_large' displayText='ShareThis'></span>
-        <span class='st_email_large' displayText='Email'></span>  
-      </div>
     </article>
     {{ partial "disqus.html" . }}
   </main>
   
   <nav class="pagination">
-    {{ if .Next }}
-      <span class="previous">&larr; <a href="{{ .Next.Permalink }}" rel="prev">{{ .Next.Title }}</a></span>
-    {{ end }}
     {{ if .Prev }}
-      <span class="next"><a href="{{ .Prev.Permalink }}" rel="next">{{ .Prev.Title }}</a> &rarr;</span>
+      <span class="previous">&larr; <a href="{{ .Prev.Permalink }}" rel="prev">{{ .Prev.Title }}</a></span>
+    {{ end }}
+    {{ if .Next }}
+      <span class="next"><a href="{{ .Next.Permalink }}" rel="next">{{ .Next.Title }}</a> &rarr;</span>
     {{ end }}
   </nav>
 
