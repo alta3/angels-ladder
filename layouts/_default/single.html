@@ -2,12 +2,12 @@
 
   <nav class="pagination">
     <ul>
-    {{ if .Prev }}
-      <li class="previous">&larr; <a href="{{ .Prev.Permalink }}" rel="prev">Prev</a></span>
+    {{ if .NextInSection }}
+      <li class="previous">&larr; <a href="{{ .NextInSection.Permalink }}" rel="prev">Prev</a></span>
     {{ end }}
       <li class="center-text"><a href="..">Table Of Contents</a></span>
-    {{ if .Next }}
-      <li class="next"><a href="{{ .Next.Permalink }}" rel="next">Next</a> &rarr;</span>
+    {{ if .PrevInSection }}
+      <li class="next"><a href="{{ .PrevInSection.Permalink }}" rel="next">Next</a> &rarr;</span>
     {{ end }}
     </ul>
   </nav>
@@ -35,12 +35,12 @@
   
   <nav class="pagination">
     <ul>
-    {{ if .Prev }}
-      <li class="previous">&larr; <a href="{{ .Prev.Permalink }}" rel="prev">Prev</span>
+    {{ if .NextInSection }}
+      <li class="previous">&larr; <a href="{{ .NextInSection.Permalink }}" rel="prev">Prev</a></span>
     {{ end }}
       <li class="center-text"><a href="..">Table Of Contents</a></span>
-    {{ if .Next }}
-      <li class="next"><a href="{{ .Next.Permalink }}" rel="next">Next</a> &rarr;</span>
+    {{ if .PrevInSection }}
+      <li class="next"><a href="{{ .PrevInSection.Permalink }}" rel="next">Next</a> &rarr;</span>
     {{ end }}
     </ul>
   </nav>
