@@ -12,18 +12,16 @@ article img {
 
 /* Pagination */
 nav.pagination {
-  padding: 20px 0 20px 0;
-  overflow: hidden;
+  text-align: center;
 }
-nav.pagination span.previous {
-  float:left;
-  padding: 10px 0 10px 0;
-  max-width: 300px;
+nav.pagination li {
+  display: inline;
 }
-nav.pagination span.next {
-  float:right;
-  padding: 10px 0 10px 0;
-  max-width: 300px;
+nav.pagination li.previous {
+  padding: 0 50px 0 0;
+}
+nav.pagination li.next {
+  padding: 0 0 0 50px;
 }
 nav.pagination a {
   color: #29abe2;

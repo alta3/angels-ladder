@@ -1,12 +1,15 @@
 {{ partial "header.html" . }}
 
   <nav class="pagination">
+    <ul>
     {{ if .Prev }}
-      <span class="previous">&larr; <a href="{{ .Prev.Permalink }}" rel="prev">{{ .Prev.Title }}</a></span>
+      <li class="previous">&larr; <a href="{{ .Prev.Permalink }}" rel="prev">Prev</a></span>
     {{ end }}
+      <li class="center-text"><a href="..">Table Of Contents</a></span>
     {{ if .Next }}
-      <span class="next"><a href="{{ .Next.Permalink }}" rel="next">{{ .Next.Title }}</a> &rarr;</span>
+      <li class="next"><a href="{{ .Next.Permalink }}" rel="next">Next</a> &rarr;</span>
     {{ end }}
+    </ul>
   </nav>
 
   <!-- Main Section Layout
